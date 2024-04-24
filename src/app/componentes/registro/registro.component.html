@@ -1,0 +1,16 @@
+<div class="paginaRegistro">
+  <div class="container text-center text-light user-select-none" style="height: 800px;">
+    <h1>
+      Crear cuenta
+    </h1>
+    <p>
+      Por favor, ingrese un usuario y una contraseña para crear su cuenta
+    <p>
+  
+    <div class="d-flex flex-column col-sm-4 mx-auto h-25 mt-4">
+      <input class="mb-3 form-control h-25 rounded-pill bg-dark border border-secondary" style="color: white;" type="text" placeholder="Usuario" [(ngModel)]="usuarioObjeto.user">
+      <input class="form-control h-25 rounded-pill bg-dark border-secondary"style="color: white;" type="text" placeholder="Contraseña" [(ngModel)]="usuarioObjeto.password" type="password">
+      <button class="btn btn-success h-25 rounded-pill border-secondary mt-4" (click)="registrarse()">Registrarse</button>
+    </div>
+  </div>
+</div>

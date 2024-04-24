@@ -1,0 +1,24 @@
+@if(rutaActual == "/login")
+{
+  <div class="loginForm">
+    <div class="container text-center text-light user-select-none" style="height: 800px;">
+      <h1>
+        Inicio de sesión
+      </h1>
+      <p>
+        Por favor, ingrese sus credenciales
+      <p>
+    
+      <div class="d-flex flex-column col-sm-4 mx-auto h-25 mt-4">
+        <input class="mb-3 form-control h-25 rounded-pill bg-dark border border-secondary" style="color: white;" type="text" placeholder="Usuario" [(ngModel)]="usuarioIngresado.user">
+        <input class="form-control h-25 rounded-pill bg-dark border-secondary" style="color: white;" type="text" placeholder="Contraseña" [(ngModel)]="usuarioIngresado.password" type="password">
+        <button class="btn btn-success h-25 rounded-pill border-secondary mt-4" (click)="iniciarSesion()">Iniciar sesión</button>
+      </div>
+    
+      <p>
+        ¿Todavía no ha creado una cuenta?, haga click <a (click)="irARegistro()" role='button' class="text-success pe-auto">aquí</a> para crear una.
+      </p>
+    </div>
+  </div>
+}
+<router-outlet></router-outlet>
