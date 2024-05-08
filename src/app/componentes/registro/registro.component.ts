@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
+import { Auth, createUserWithEmailAndPassword } from '@angular/fire/auth';
 import { FormsModule } from '@angular/forms';
 import { RouterOutlet, Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-registro',
@@ -10,37 +12,48 @@ import { RouterOutlet, Router } from '@angular/router';
   styleUrl: './registro.component.css'
 })
 export class RegistroComponent {
-  //inyeccion de dependencia
-  constructor(private router: Router)
-  {
+  // //inyeccion de dependencia
+  // constructor(private router: Router)
+  // {
 
-  }
+  // }
 
-  ngOnInit(): void
-  {
-    const datosLocales = localStorage.getItem("users");
-    if(datosLocales != null)
-    {
-      this.usuariosRegistrados = JSON.parse(datosLocales);
-    }
-  }
-  usuariosRegistrados: any[] = [];
-  usuarioObjeto:any = 
-  {
-    user: "",
-    password: ""
-  };
+  // ngOnInit(): void
+  // {
+  //   const datosLocales = localStorage.getItem("users");
+  //   if(datosLocales != null)
+  //   {
+  //     this.usuariosRegistrados = JSON.parse(datosLocales);
+  //   }
+  // }
+  // usuariosRegistrados: any[] = [];
+  // usuarioObjeto:any = 
+  // {
+  //   user: "",
+  //   password: ""
+  // };
 
-  registrarse()
-  {
-    this.usuariosRegistrados.push(this.usuarioObjeto);
+  // registrarse()
+  // {
+  //   this.usuariosRegistrados.push(this.usuarioObjeto);
 
-    localStorage.setItem("users",JSON.stringify(this.usuariosRegistrados))
-    this.usuarioObjeto =
-    {
-      user: "",
-      password: ""
-    };
-    this.router.navigate(['/login']);
+  //   localStorage.setItem("users",JSON.stringify(this.usuariosRegistrados))
+  //   this.usuarioObjeto =
+  //   {
+  //     user: "",
+  //     password: ""
+  //   };
+  //   this.router.navigate(['/login']);
+  // }
+
+  constructor(public authService: AuthService){}
+
+  newUserMail: string = "";
+  newUserPWD: string = "";
+
+
+  register()
+  {
+    this.authService.Register(this.newUserMail, this.newUserPWD);
   }
 }

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "EjerciciosClase1": {
+    "tpsaladejuegos": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -57,10 +57,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "EjerciciosClase1:build:production"
+              "buildTarget": "tpsaladejuegos:build:production"
             },
             "development": {
-              "buildTarget": "EjerciciosClase1:build:development"
+              "buildTarget": "tpsaladejuegos:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -68,7 +68,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "EjerciciosClase1:build"
+            "buildTarget": "tpsaladejuegos:build"
           }
         },
         "test": {

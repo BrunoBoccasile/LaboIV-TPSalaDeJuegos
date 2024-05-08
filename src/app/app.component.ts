@@ -3,6 +3,7 @@ import { FormsModule, NgSelectOption } from '@angular/forms';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { HomeComponent } from './componentes/home/home.component';
 import { NgClass, NgStyle } from '@angular/common';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -13,5 +14,12 @@ import { NgClass, NgStyle } from '@angular/common';
 })
 export class AppComponent {
   title = "TP Sala de juegos";
+  constructor(public auth: AuthService){}
+  logOut()
+  {
+    this.auth.LogOut();
+  }
+
+  
 }
 

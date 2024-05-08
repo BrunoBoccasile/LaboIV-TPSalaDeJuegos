@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -11,4 +12,6 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 })
 export class HomeComponent {
   title = 'EjerciciosClase2';
+  constructor(public authService: AuthService){}
+  
 }

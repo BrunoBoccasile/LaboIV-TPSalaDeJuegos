@@ -1,7 +1,25 @@
-
-<div class="container text-center text-light">
-
-    <h1>Home</h1>
-    <p>Bienvenido al Home! </p>
-    <img src="../assets/images/casa.png" style="width: 200px; height: 200px;">
+<div class="py-4 px-4">
+    @if (authService.auth.currentUser != null) 
+    {
+        <div class="card bg-dark text-light position-absolute" style="width: 20rem;">
+            <div class="card-body">
+                <h5 class="card-title">Datos usuario</h5>
+                <p class="card-text"><strong>Usuario:</strong> {{this.authService.auth.currentUser?.email}}</p>
+                
+            </div>
+        </div>
+    }
+    <div class="row justify-content-md-center mt-5" style="height: 200px;">
+        <div class="col-2 bg-secondary border border-dark text-center text-light d-flex flex-column p-5">
+            <h1 class="text-truncate">Juegos</h1>
+            <input type="button" class="btn btn-danger rounded-pill border-secondary mt-4" value="Ahorcado">
+            <input type="button" class="btn btn-danger rounded-pill border-secondary mt-4" value="Mayor o menor">
+            <input type="button" class="btn btn-danger rounded-pill border-secondary mt-4" value="Preguntados">
+        </div>
+        <div class="col-1">
+        </div>
+        <div class="col-2 bg-secondary border border-dark text-center text-light d-flex flex-column p-5">
+            <h1 class="text-truncate">Listados</h1>
+        </div>
+    </div>
 </div>
