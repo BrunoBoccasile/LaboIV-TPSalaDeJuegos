@@ -1,5 +1,5 @@
-<div class="container text-light flex-column text-center justify-content-center">
-    <div class="col-6 mx-auto">
+<div class="container text-light flex-column  justify-content-center py-4">
+    <div class="col-6 mx-auto text-center">
         <h1>¿Quién soy?</h1>
         <p>
             Mi nombre es <strong>Bruno Boccasile</strong>.
@@ -10,7 +10,7 @@
         <img src="../../../assets/images/quiensoy.jpg" width="200px" class="rounded-5 mb-5">
     </div>
     <div class="row">
-        <div class="col-6 ">
+        <div class="col-6 text-center">
             <h3>Acerca de la página</h3>
             <p>
                 "Sala de Juegos" está desarrollada en Angular y corresponde a un Trabajo Práctico de la materia
@@ -20,16 +20,26 @@
             </p>
         </div>
         <div class="col-6 ">
-            <h3>Explicación del juego</h3>
+            <h3 class="text-center">Explicación del juego</h3>
             <p>
-                Próximamente...
+                "El Doce" es un juego inventado por mí, inspirado en el clásico blackjack. El objetivo principal es acercarse lo más posible a una suma de 12 con los dados lanzados, sin pasarse. El juego es entre el usuario y la máquina.
+                <br>
+                La partida comienza con la máquina lanzando dos dados, sin revelar el resultado al usuario. A continuación, el usuario lanza sus dos primeros dados y puede optar por lanzar dados adicionales de uno en uno o plantarse.
+                <br>
+                Si el usuario no se pasa de 12, el juego continúa. La máquina entonces revela sus dados. Si la máquina obtiene una suma de 9 o más, está obligada a plantarse. En caso contrario, debe seguir lanzando dados hasta cumplir con esta condición.
+                <br>
+                Si la máquina logra plantarse sin pasarse de 12, gana el jugador (usuario o máquina) cuya suma de dados sea la más cercana a 12 sin excederla.
+                <br>
+                En caso de que el usuario y la máquina hayan sumado la misma cantidad, el resultado es un empate.
             </p>
         </div>
     </div>
-    <div class="col-6 mx-auto d-flex justify-content-center mt-5">
-        <img src="../../../assets/images/ghub.png" width="64"> 
-        <h3 class="m-3">BrunoBoccasile</h3> 
+    <div class="text-center">
+        <div class="col-6 mx-auto d-flex justify-content-center mt-5">
+            <img src="../../../assets/images/ghub.png" width="64"> 
+            <h3 class="m-3">BrunoBoccasile</h3> 
+        </div>
+        <a href="https://github.com/BrunoBoccasile" target="_blank" class="btn btn-success rounded-pill border-secondary">Ir a mi GitHub</a>
     </div>
-    <a href="https://github.com/BrunoBoccasile" target="_blank" class="btn btn-success rounded-pill border-secondary">Ir a mi GitHub</a>
 
 </div>

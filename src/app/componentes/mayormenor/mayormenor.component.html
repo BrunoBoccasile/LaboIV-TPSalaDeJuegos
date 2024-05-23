@@ -1,0 +1,24 @@
+<div class="d-flex flex-row p-5 align-items-center"  id="container-0">
+<div class="d-flex flex-column justify-content-center align-items-center p-5 m-2 h-75 border border-3 border-black" id="container-1">
+<h1>Mazo</h1>
+<img src="../../../assets/images/cartas/reverso.png">
+<h2>{{47 - indiceCartaActual}}</h2>
+</div>
+<div class="d-flex flex-column justify-content-center align-items-center text-center p-5 m-2 h-100 border border-5 border-black" id="container-2">
+<h1 class="display-4">Carta actual</h1>
+<img src={{cartas[indiceCartaActual].rutaImagen}} class="mb-4">
+<h2>La siguiente carta será...</h2>
+<div class="btn-group" role="group" id="btn-group">
+    <button type="button" class="btn btn-success btn-lg"  (click)="siguienteCarta('mayor')">Mayor</button>
+    <button type="button" class="btn btn-danger btn-lg" (click)="siguienteCarta('menor')">Menor</button>
+    <button type="button" class="btn btn-light btn-lg" (click)="siguienteCarta('igual')">Igual</button>
+</div>
+</div>
+<div class="d-flex flex-column justify-content-center align-items-center m-2 h-75 border border-3 border-black" id="container-3">
+    <h1>Puntos</h1>
+    <div class="card text-light d-flex justify-content-center align-items-center" id="puntosCard">
+            <h1 class="display-1">{{puntos}}</h1>
+    </div>
+
+</div>    
+</div>

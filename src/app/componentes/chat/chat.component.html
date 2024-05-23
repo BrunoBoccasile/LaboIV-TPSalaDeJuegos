@@ -1,0 +1,47 @@
+<div id="chat-container" class="bg-secondary d-flex flex-column">
+  @if(mensajesObtenidos)
+  {
+    <div id="mensajes-container" class="flex-grow-1 overflow-auto d-flex flex-column">
+      <div class="container">
+        <div class="row">
+          @for (datosMensaje of coleccionMensajes; track $index) {
+            @if (datosMensaje.user == authService.auth.currentUser?.email) {
+              <div id="contenedorMensaje" class="mb-2">
+                <div style="font-size: small;"><strong>Yo</strong> - {{formatearFecha(datosMensaje.fecha)}}</div>
+                <label class="text-light p-2 border rounded-4 mensaje-label" id="mensajePropio">
+                  {{datosMensaje.mensaje}}
+                </label>
+              </div>
+            } @else {
+              <div id="contenedorMensaje" class="mb-2">
+                <div style="font-size: small;"><strong>{{datosMensaje.user}}</strong> - {{formatearFecha(datosMensaje.fecha)}}</div>
+                <label class="text-dark p-2 border rounded-4 mensaje-label" id="mensajeAjeno">
+                  {{datosMensaje.mensaje}}
+                </label>
+              </div>
+            }
+          }
+        </div>
+      </div>
+    </div>
+    <div class="input-container p-3 bg-primary d-flex align-items-center">
+      <input
+        type="text" 
+        [(ngModel)]="newMensaje" 
+        (keydown.enter)="enviarMensaje()" 
+        placeholder="Mensaje"
+        class="form-control w-75"
+      />
+      <button (click)="enviarMensaje()" class="btn btn-primary mt-2 w-75">Enviar</button>
+    </div>
+  }
+  @else 
+  {
+    <div class="d-flex align-items-center justify-content-center flex-column h-100">
+      <h1>Cargando chat...</h1>
+      <div class="spinner"></div>
+    </div>
+
+  }
+
+</div>

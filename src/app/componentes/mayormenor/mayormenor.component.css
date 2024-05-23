@@ -1,0 +1,107 @@
+#container-0{
+    height: 93.1vh;
+    width: 100vw;
+}
+
+#container-1{
+    width: 33.3vw;
+    background-color: #4c6c06;
+    border-radius: 80px;
+}
+
+#container-2{
+    width: 33.3vw;
+    background-color: #007008;
+    border-radius: 80px;
+    h1{
+        font-size: 4vh;
+        font-weight: bolder;
+    }
+}
+#container-3{
+    width: 33.3vw;
+    background-color: #4c6c06;
+    border-radius: 80px;
+}
+
+#puntosCard{
+    width: 40%;
+    height: 40%;
+    background-color: #d10000;
+    h1{
+        font-size: 7vw;
+        font-weight: bolder;
+    }
+}
+
+img {
+    width: 200px;
+    height: 312px;
+}
+@media (max-height: 768px) {
+    #container-1, #container-2, #container-3 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #puntosCard h1 {
+        font-size: 6vw;
+    }
+
+    h1 {
+        font-size: 5vw;
+    }
+
+    h2 {
+        font-size: 3vw;
+    }
+
+    button {
+        font-size: 1.5vw;
+    }
+
+    
+    img {
+        width: 100px;
+        height: 166px;
+    }
+
+
+}
+
+@media (max-height: 384px)
+{
+    img {
+        width: 50px;
+        height: 83px;
+    }
+
+}
+
+@keyframes flashRed {
+    50% {
+
+        background-color: rgb(177, 70, 70);
+    }
+    100% {
+        background-color: inherit;
+    }
+}
+
+@keyframes flashGreen {
+    50% { 
+        background-color: rgb(90, 189, 90);
+    }
+    100% {
+        background-color: inherit;
+    }
+}
+
+
+.flash-red {
+    animation: flashRed 0.5s;
+}
+
+.flash-green {
+    animation: flashGreen 0.5s;
+}

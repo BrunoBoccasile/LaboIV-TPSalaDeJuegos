@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
@@ -12,6 +12,10 @@ import { AuthService } from '../../services/auth.service';
 })
 export class HomeComponent {
   title = 'EjerciciosClase2';
-  constructor(public authService: AuthService){}
-  
+  constructor(public authService: AuthService, public router: Router){}
+
+  irARuta(ruta: string)
+  {
+    this.router.navigate(['/' + ruta]);
+  }
 }

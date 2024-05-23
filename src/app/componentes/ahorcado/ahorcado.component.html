@@ -1,0 +1,28 @@
+<div class="d-flex flex-column justify-content-center p-5" id="container-0">
+    <div class="container bg-secondary p-4 border border-dark border-5 rounded-5">
+        <div class="row">
+            <div class="col" align="center">
+                <img src="../../../assets/images/img-ahorcado/ahorcado-{{numFallos}}.png" width="25%">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col" align="center">
+                <h1 class="display-1" style="letter-spacing: 1rem;">{{palabraAdivinadaPorAhora}}</h1>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col" align="center">
+            @for (boton of botones; track $index) 
+            {
+                <button class="btn m-2" style="height: 70px; width: 70px;" 
+                (click)="botonClickeado(boton)" 
+                [ngClass]="boton.estado">
+                    <h3>{{boton.letra}}</h3>
+                </button>   
+            }
+          </div>
+        </div>
+      </div>
+      
+</div>

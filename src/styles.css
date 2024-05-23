@@ -2,6 +2,14 @@
 
 
 
-.body{
-    background-color:  #2f2f35;
+@import url('https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+*{
+    font-family: Reddit Sans;
 }
+
+
+/* html, body{
+height: 96.5%;
+width: 100%;
+margin: 0;
+} */

@@ -1,0 +1,23 @@
+#container-0{
+    height: 93.1vh;
+    width: 100vw;
+
+    background-image: url('../../../assets/images/img-ahorcado/carcel.webp'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+.boton-letra-acertada{
+    background-color: #31dd1b;
+    pointer-events: none;
+}
+
+.boton-letra-no-acertada{
+    background-color: #bd3434;
+    pointer-events: none;
+}
+
+.boton-no-pulsado{
+    background-color: #E8DDB5;
+}

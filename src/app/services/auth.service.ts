@@ -24,6 +24,8 @@ export class AuthService {
         {
           this.loggedUser = res.user.email;
           this.router.navigateByUrl('home');
+          this.errorRegistro = false;
+          this.errorLogin = false;
         }  
       }).catch((e) => {
       console.log(e.code);
@@ -66,6 +68,8 @@ export class AuthService {
           this.loggedUser = res.user.email;
           this.guardarLog(this.loggedUser);
           this.router.navigateByUrl('home');
+          this.errorLogin = false;
+          this.errorRegistro = false;
         }
     }).catch((e) => {
       console.log(e.code);

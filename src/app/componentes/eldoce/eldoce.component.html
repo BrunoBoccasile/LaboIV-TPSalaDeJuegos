@@ -1,0 +1,43 @@
+<div id="container-0">
+    <div id="botonera" class="w-50 mx-auto d-flex flex-row justify-content-center align-items-center mb-4">
+        <button (click)="tirarDados(dadosUsuario)" id="btnTirar" class="btn btn-warning btn-lg col-6 m-4">TIRAR DADOS</button>
+        <button (click)="plantarse()" id="btnPlantarse" disabled="true" class="btn btn-danger btn-lg col-6 m-4">PLANTARSE</button>
+    </div>
+    <div id="container-1" class="d-flex flex-column justify-content-center align-items-center">
+        <div class="row text-light w-100 d-flex justify-content-center">
+            <div class="col-6 text-center">
+                <h1>Mis dados</h1>
+                <h3>Suma: {{sumaUsuario}} </h3>
+                <div class="dados-container">
+                    @for (dado of dadosUsuario; track $index)
+                    {
+                        <img class="m-3 dado-imagen" src="{{dado.rutaImagen}}">
+                    }
+                </div>
+            </div>
+            <div class="col-6 text-center">
+                <h1>Máquina</h1>
+                @if(dadosMaquinaRevelados)
+                {
+                    <h3>Suma: {{sumaMaquina}}</h3>
+                    <div class="dados-container">
+                        @for (dado of dadosMaquina; track $index)
+                        {
+                            <img class="m-3 dado-imagen" src="{{dado.rutaImagen}}">
+                        }
+                    </div>
+                }
+                @else 
+                {
+                    <h3>Suma: ?</h3>
+                    <div class="dados-container">
+                        @for (dado of dadosMaquina; track $index)
+                        {
+                            <img class="m-3 dado-imagen" src="../../../assets/images/eldoce/incognita.png">
+                        }
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

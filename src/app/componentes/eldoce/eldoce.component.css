@@ -1,0 +1,32 @@
+#container-0{
+    height: 93.1vh;
+    width: 100vw;
+    background-image: url('../../../assets/images/eldoce/fondo-eldoce.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    overflow: hidden;
+}
+
+
+.dados-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
+
+.dado-imagen {
+    width: 10vw; 
+    max-width: 100%;
+    height: auto;
+    flex: 0 0 auto; 
+}
+
+h1{
+    font-weight: bolder;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+h3{
+    font-weight: bolder;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}

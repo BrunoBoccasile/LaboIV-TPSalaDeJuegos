@@ -1,4 +1,4 @@
-<div class="paginaRegistro">
+<div id="paginaRegistro" class="py-4 mt-5">
   <div class="container text-center text-light user-select-none" style="height: 800px;">
     @if(authService.auth.currentUser == null)
     {
@@ -16,7 +16,7 @@
         
       </div>
       <div class="d-flex justify-content-center">
-        @if ((authService.errorRegistro && authService.loggedUser == "")) 
+        @if ((authService.errorRegistro)) 
         {
           <p class="text-danger"><strong>ERROR: </strong> {{authService.mensajeErrorRegister}}</p>
         }

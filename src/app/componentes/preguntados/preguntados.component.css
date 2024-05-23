@@ -1,0 +1,87 @@
+#container-0{
+    height: 93.1vh;
+    width: 100vw;
+  background-image: url('../../../assets/images/preguntados/fondo-preguntados.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
+
+
+.spinner{
+    border: 10px solid rgba(73, 126, 240, 0.596);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-left-color: transparent;
+  
+    animation: spin 1s linear infinite;
+  }
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+.gris
+{
+    background-color: rgb(34, 34, 34);
+}
+.verde{
+    background-color: rgb(33, 80, 33);
+}
+
+.rojo {
+    background-color: rgb(90, 41, 41);
+}
+
+#card-fondo  {
+    width: 50vw;
+    height: 80vh;
+}
+
+#card-img{
+    height: 40vh;
+     width: 40vw;
+}
+
+#botonera button{
+    height: 5vh; 
+    width: 100%;
+    font-size: 1.5rem;
+}
+@media (max-height: 960px) {
+
+    #botonera button{
+        font-size: 1rem;
+    }
+
+    #card-pregunta
+    {
+        font-size: 1.5rem;
+    }
+
+
+
+}
+@media (max-height: 670px) {
+
+    #botonera button{
+        height: 4vh; 
+        font-size: 0.7rem;
+    }
+
+    #card-pregunta
+    {
+        font-size: 0.8rem;
+    }
+
+
+
+}

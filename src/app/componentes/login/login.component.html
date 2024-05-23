@@ -1,4 +1,4 @@
-<div class="loginForm">
+<div id="loginForm" class="py-4 mt-5">
   <div class="container text-center text-light user-select-none" style="height: 800px;">
     @if(authService.auth.currentUser == null)
     {
@@ -24,9 +24,8 @@
       <input type="button" value="Acceso rápido 1" class="btn btn-warning rounded-pill m-1" (click)="accesoRapido(1)">
       <input type="button" value="Acceso rápido 2" class="btn btn-danger rounded-pill m-1" (click)="accesoRapido(2)">
       <div class="d-flex justify-content-center">
-        @if ((authService.errorLogin && authService.loggedUser == "")) 
+        @if ((authService.errorLogin)) 
         {
-          
           <p class="text-danger"><strong>ERROR: </strong> {{authService.mensajeErrorLogin}}</p>
         }
       </div>
